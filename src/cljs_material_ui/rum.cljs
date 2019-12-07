@@ -4,7 +4,7 @@
   (:require [rum.core]
             [cljs-material-ui.core]))
 
-(def selectable-list (cljs-material-ui.core/adapt-rum-class ((aget js/MaterialUI "makeSelectable") (aget js/MaterialUI "List"))))
+;(def selectable-list (cljs-material-ui.core/adapt-rum-class ((aget js/MaterialUI "makeSelectable") (aget js/MaterialUI "List"))))
 
 (def app-bar (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "AppBar")))
 (def avatar (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "Avatar")))
@@ -56,7 +56,7 @@
 (def input-adornment (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "InputAdornment")))
 (def input-base (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "InputBase")))
 (def input-label (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "InputLabel")))
-(def jss-preset (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "jssPreset")))
+;(def jss-preset (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "jssPreset")))
 (def linear-progress (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "LinearProgress")))
 (def list (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "List")))
 (def list-item (cljs-material-ui.core/adapt-rum-class (aget js/MaterialUI "ListItem")))

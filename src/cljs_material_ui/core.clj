@@ -4,7 +4,7 @@
 (defn kebab-case
   "Converts CamelCase / camelCase to kebab-case"
   [s]
-  (str/join "-" (map str/lower-case (re-seq #"\w[a-z]+" s))))
+  (str/join "-" (map str/lower-case (re-seq #"\w[a-z]+|[0-9]+" s))))
 
 (defn generate-mui-dom-fn [fname tname]
   (let [f (symbol fname)]

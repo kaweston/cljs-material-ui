@@ -4,7 +4,7 @@
             [reagent.impl.template]
             [reagent.interop :refer-macros [$ $!]]))
 
-(def selectable-list (r/adapt-react-class ((aget js/MaterialUI "makeSelectable") (aget js/MaterialUI "List"))))
+;(def selectable-list (r/adapt-react-class ((aget js/MaterialUI "makeSelectable") (aget js/MaterialUI "List"))))
 
 (def app-bar (r/adapt-react-class (aget js/MaterialUI "AppBar")))
 (def avatar (r/adapt-react-class (aget js/MaterialUI "Avatar")))
@@ -56,7 +56,7 @@
 (def input-adornment (r/adapt-react-class (aget js/MaterialUI "InputAdornment")))
 (def input-base (r/adapt-react-class (aget js/MaterialUI "InputBase")))
 (def input-label (r/adapt-react-class (aget js/MaterialUI "InputLabel")))
-(def jss-preset (r/adapt-react-class (aget js/MaterialUI "jssPreset")))
+;(def jss-preset (r/adapt-react-class (aget js/MaterialUI "jssPreset")))
 (def linear-progress (r/adapt-react-class (aget js/MaterialUI "LinearProgress")))
 (def list (r/adapt-react-class (aget js/MaterialUI "List")))
 (def list-item (r/adapt-react-class (aget js/MaterialUI "ListItem")))

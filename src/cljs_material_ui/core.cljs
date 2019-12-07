@@ -9,7 +9,13 @@
   (letfn [(transform [[k v]] [(t k) v])]
     (postwalk (fn [x] (if (map? x) (into {} (map transform x)) x)) coll)))
 
-(def props-kebab->camel->js (comp clj->js camel-case-keys))
+;(def props-kebab->camel->js (comp clj->js camel-case-keys))
+
+(defn props-kebab->camel->js
+  [props]
+  (->> props
+       (transform-keys camel-case)
+       clj->js))
 
 (defn create-mui-cmp
   ([react-class args]
@@ -30,11 +36,11 @@
 (defn color [& colour-keys]
   (apply aget (concat [js/MaterialUIColors] (map #(name (camel-case %)) colour-keys))))
 
-(def make-selectable (aget js/MaterialUI "makeSelectable"))
+;(def make-selectable (aget js/MaterialUI "makeSelectable"))
 
 (def create-mui-el (partial create-mui-cmp js/MaterialUI))
 
-(defn selectable-list [& args] (create-mui-cmp (make-selectable (aget js/MaterialUI "List")) args))
+;(defn selectable-list [& args] (create-mui-cmp (make-selectable (aget js/MaterialUI "List")) args))
 
 (defn app-bar [& args] (create-mui-el "AppBar" args))
 (defn avatar [& args] (create-mui-el "Avatar" args))
@@ -86,7 +92,7 @@
 (defn input-adornment [& args] (create-mui-el "InputAdornment" args))
 (defn input-base [& args] (create-mui-el "InputBase" args))
 (defn input-label [& args] (create-mui-el "InputLabel" args))
-(defn jss-preset [& args] (create-mui-el "jssPreset" args))
+;(defn jss-preset [& args] (create-mui-el "jssPreset" args))
 (defn linear-progress [& args] (create-mui-el "LinearProgress" args))
 (defn list [& args] (create-mui-el "List" args))
 (defn list-item [& args] (create-mui-el "ListItem" args))
